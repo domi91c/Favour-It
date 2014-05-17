@@ -1,0 +1,7 @@
+<%- if current_user %>
+  <%= current_user.username %>
+  <br />
+  <%= "#{current_user.provider} - #{current_user.uid}" %>
+  <br />
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
+<% end %>
